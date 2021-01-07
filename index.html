@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Web Maker Toolbox</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel='stylesheet' href='./style.css'>
+    <link rel="shortcut icon" href="https://docs.google.com/drawings/d/e/2PACX-1vR6mnb1i0uRGYg5XVluPQ52bDaYQb7CjcuwWxq5njzRJE9mfhqpZXYl6AGmAFV2WX4hfe3y9Ax1TvrF/pub?w=604&h=455" type="image/x-icon">
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        };
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA Example">
+    <link rel="apple-touch-icon" href="icon-152x152.png">
+    <meta name="msapplication-TileImage" content="icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<style>
+.button {
+  border: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 5px 3px;
+  cursor: pointer;
+  font-family: roboto;
+  border-radius: 3px;
+  }
+  .theme {
+  background-color: #006064; /* Red */
+    color: white;
+
+  }
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.appicon {
+font-size: 40px;
+  transition: 0.2s;
+
+}
+.appicon:hover {
+font-size: 50px;
+}
+.w20 {
+  width: 20%;
+}
+
+</style>
+<body>
+    <nav>
+        <a href='index.html' class='selected'>Home</a>
+        <a href='login.html' class='selected'>Dashboard</a>
+         <a href='install.html' class='selected'>Enable Offline</a>
+
+
+
+    </nav>
+    <main>
+    <center >
+         <a   href='login.html' class='button theme w20'><span class="material-icons appicon">perm_identity</span><br>Sign In </a>
+         
+                  <a id="myBtn" class='button theme w20'>                  <span  class='material-icons appicon'>signal_wifi_off</span><br>
+Enable Offline
+</a>
+         <a  href='https://sites.google.com/view/web-maker-toolbox-updates/update' class='button theme w20'><span class="material-icons appicon">
+system_update
+</span><br>Update</a>
+
+<br>
+
+ <a href='qr_code.html' class='button theme w20'>                  <span  class='material-icons appicon'>qr_code</span><br>
+Qr Code Generator
+</a>
+
+<a href='about.html' class='button theme w20'>                  <span  class='material-icons appicon'>info</span><br>
+About
+</a>
+
+<a href='https://sites.google.com/view/web-maker-tiydines2019/extensions' class='button theme w20'>                  <span  class='material-icons appicon'>extension</span><br>
+Extensions
+</a>
+
+<br>
+
+<a href='https://forms.google.com/create' class='button theme w20'>                  <span  class='material-icons appicon'>description</span><br>
+New Google Form
+</a>
+
+<a href='https://drawings.google.com/create' class='button theme w20'>                  <span  class='material-icons appicon'>format_shapes</span><br>
+New Google Drawing
+</a>
+
+<a href='https://drive.google.com/' class='button theme w20'>                  <span  class='material-icons appicon'>folder</span><br>
+Go to Google Drive
+</a>
+
+
+    </main>
+     <!-- My Acount Box -->
+<div id="myModal" class="modal">
+
+  <!-- My Account Box content -->
+  <div class="modal-content">
+  <!--<span class="close">&times;</span>-->
+    
+    
+    <center>
+<h1>Ready to enable offline?</h1>
+<p>To enable offline, Click the + icon in the browser address bar. (Google Chrome Desktop Only). To enable offline in Google Chrome Android, Click the "More" symbol next to the address bar and click "Add to Home Screen" Note: Internet is required to login and run the Web Maker Dashboard. You can still edit and view your website offline in Google Drive by enabling offline.</p>
+<button class="close button">Close</button>
+<a target="_blank" rel="noopener" href="https://drive.google.com/drive/shared-with-me" class="button theme">Open Google Drive</a>
+
+    </center>
+  </div>
+
+</div>
+</body>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</html>

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+body{
+  margin: 0;
+  font-family: roboto, sans-serif;
+  
+}
+nav{
+  background: #006064;
+  color: #fff;
+  padding: 20px;
+}
+
+nav a{
+    display:inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover{
+    text-decoration: none;
+}
+nav a.selected{
+    font-weight: none;
+}
+main{
+    padding: 20px;
+    text-align: center;
+}
